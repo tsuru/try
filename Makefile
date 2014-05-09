@@ -9,3 +9,6 @@ test-deps:
 
 test: test-deps
 	@py.test -s .
+
+run:
+	@honcho start
