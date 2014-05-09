@@ -1,18 +1,48 @@
 <!DOCTYPE html>
 <html>
-<head>
-<body>
-{% from "_formhelpers.html" import render_field %}
-<form method="post" action="/register">
-	{{ form.csrf_token }}
-	<dl>
-		{{ render_field(form.email) }}
-		{{ render_field(form.password) }}
-		{{ render_field(form.password_confirmation) }}
-		{{ render_field(form.identity) }}
-		{{ render_field(form.terms) }}
-	</dl>
-	<p><input type=submit value=Register></p>
-</form>
-</body>
+	<head>
+		<meta charset="utf-8">
+
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+		<link rel="stylesheet" href="http://docs.tsuru.io/en/latest/_static/resources/styles/application.css">
+		<link rel="stylesheet" media="only screen and (min-width: 320px)" href="http://docs.tsuru.io/en/latest/_static/resources/styles/small.css">
+		<link rel="stylesheet" media="only screen and (min-width: 720px)" href="http://docs.tsuru.io/en/latest/_static/resources/styles/medium.css">
+		<link rel="stylesheet" media="only screen and (min-width: 1024px)" href="http://docs.tsuru.io/en/latest/_static/resources/styles/large.css">
+
+		<title>Tsuru</title>
+	</head>
+	<body>
+		<header id="header" class="section">
+			<div class="container">
+				<h1 class="brand">
+					<a href="http://tsuru.io"><img class="brand-image" src="http://tsuru.io/resources/images/brand.svg" alt="Tsuru"></a>
+				</h1>
+				<nav class="navigation">
+					<ul class="navigation-items">
+						<li class="navigation-item"><a class="navigation-link scroll-btn" href="#features" title="Features">Features</a></li>
+						<li class="navigation-item"><a class="navigation-link scroll-btn" href="#community" title="Community">Community</a></li>
+						<li class="navigation-item"><a class="navigation-link" href="http://docs.tsuru.io/en/latest/" title="Documentation">Documentation</a></li>
+						<li class="navigation-item"><a class="navigation-link" href="http://blog.tsuru.io" title="Blog">Blog</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<main id="content">
+			<article class="content-section section">
+				{% from "_formhelpers.html" import render_field %}
+				<form method="post" action="/register">
+					{{ form.csrf_token }}
+					<dl>
+						{{ render_field(form.email) }}
+						{{ render_field(form.password) }}
+						{{ render_field(form.password_confirmation) }}
+						{{ render_field(form.identity) }}
+						{{ render_field(form.terms) }}
+					</dl>
+					<p><input type=submit value=Register></p>
+				</form>
+			</article>
+		</main>
+		<footer id="footer"></footer>
+	</body>
 </html>
