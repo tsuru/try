@@ -13,4 +13,3 @@ class AppTestCase(TestCase):
         self.app = app.test_client()
         response = self.app.get("/help")
         self.assertEqual(200, response.status_code)
-
