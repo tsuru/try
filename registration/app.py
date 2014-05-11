@@ -13,3 +13,8 @@ app.debug = True
 def index():
     form = SignupForm(request.form)
     return render_template("index.html", form=form)
+
+
+@app.route("/help")
+def help():
+    return "help"
