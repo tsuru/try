@@ -9,6 +9,7 @@ test-deps:
 
 test: test-deps
 	@py.test -s .
+	@flake8 .
 
 run:
 	@honcho start
