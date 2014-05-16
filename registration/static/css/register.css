@@ -1,0 +1,53 @@
+input {
+	border: 1px solid #666;
+}
+
+form {
+	width: 700px;
+	margin: 0 auto;
+	background: #EEE;
+	font-size: 12px;
+	padding: 20px 30px 20px 30px;
+	color: #888;
+	text-shadow: 1px 1px 1px #fff;
+}
+
+form h1 {
+	font-size: 25px;
+	padding: 0px 0px 10px 40px;
+	display: block;
+	border-bottom: 1px solid #DADADA;
+	margin: -10px -30px 30px -30px;
+	color: #888;
+}
+
+form label {
+	display: block;
+	margin: 0px 0px 50x;
+}
+
+form label>span {
+	float: left;
+	width: 190px;
+	text-align: right;
+	padding-right: 10px;
+	color: #888;
+}
+
+form input[type="text"], form input[type="password"] {
+	background: #fff;
+	border: 1px solid #DADADA;
+	color: #888;
+	height: 24px;
+	margin: 2px 6px 16px 0;
+	outline: 0 none;
+	padding: 3px 3px 3px 5px;
+	width: 60%;
+}
+
+form input[type="submit"] {
+	background: #33DD99;
+	border: none;
+	padding: 10px 25px 10px 25px;
+	color: #FFF;
+}
