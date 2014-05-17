@@ -51,3 +51,9 @@ form input[type="submit"] {
 	padding: 10px 25px 10px 25px;
 	color: #FFF;
 }
+
+form .errors {
+	color: #ff0000;
+	text-align: right;
+	margin: -16px 66px 11px;
+}
