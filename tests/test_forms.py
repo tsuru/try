@@ -1,6 +1,5 @@
 from unittest import TestCase
 
-from flask.ext import wtf
 import wtforms
 
 from registration.forms import SignupForm
@@ -8,7 +7,7 @@ from registration.forms import SignupForm
 
 class SignupFormTestCase(TestCase):
     def test_should_be_a_wtform(self):
-        self.assertTrue(issubclass(SignupForm, wtf.Form))
+        self.assertTrue(issubclass(SignupForm, wtforms.Form))
 
     def test_fields(self):
         fields = {

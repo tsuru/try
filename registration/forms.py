@@ -1,10 +1,12 @@
-from flask.ext import wtf
-import wtforms
+from wtforms import Form, validators, TextField, PasswordField, BooleanField
 
 
-class SignupForm(wtf.Form):
-    email = wtforms.TextField(u"Email")
-    password = wtforms.PasswordField(u"Password")
-    password_confirmation = wtforms.PasswordField(u"Password confirmation")
-    identity = wtforms.TextField(u"National Identification Number")
-    terms = wtforms.BooleanField(u"I accept the Terms")
+class SignupForm(Form):
+    email = TextField(u"Email", [validators.Required()])
+    password = PasswordField(u"Password", [validators.Required()])
+    password_confirmation = PasswordField(u"Password confirmation")
+    identity = TextField(
+        u"National Identification Number",
+        [validators.Required()]
+    )
+    terms = BooleanField(u"I accept the Terms", [validators.Required()])

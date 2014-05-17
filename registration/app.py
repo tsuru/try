@@ -26,7 +26,7 @@ def add_user(email, password, identify):
 @app.route("/", methods=["GET", "POST"])
 def index():
     form = SignupForm(request.form)
-    if form.validate_on_submit():
+    if request.method == 'POST' and form.validate():
         add_user(form.email.data, form.password.data, form.identity.data)
         return redirect(url_for('help'))
     return render_template("index.html", form=form)
