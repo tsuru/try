@@ -19,3 +19,15 @@ class SignupFormTestCase(TestCase):
         }
         for field, cls in fields.items():
             self.assertEqual(cls, getattr(SignupForm, field).field_class)
+
+    def test_required(self):
+        form = SignupForm()
+        form.process()
+        self.assertFalse(form.validate())
+        expected = {
+            'email': [u'This field is required.'],
+            'identity': [u'This field is required.'],
+            'password': [u'This field is required.'],
+            'terms': [u'This field is required.']
+        }
+        self.assertDictEqual(form.errors, expected)
