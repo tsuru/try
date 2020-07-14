@@ -1,5 +1,5 @@
 Flask==0.10.1
 honcho==0.5.0
 gunicorn==18.0
-requests==2.3.0
+requests==2.20.0
 WTForms==1.0.5
